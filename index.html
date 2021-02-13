@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IPv4 Address Heatmap</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <style>
+        body {
+            margin: 0 auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: rgb(51, 51, 51);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>IPv4 city block addresses heatmap</h1>
+    <!-- the API is hosted on Heroku, which lags a bit -->
+    <h3>Wait for it...</h3>
+    <!-- the map box -->
+    <div id="mapid" style="width: 600px; height: 400px; margin: 0 auto;"></div>
+    <footer>
+        <h4>By: Preston Lund</h4>
+    </footer>
+    <script src='app.js'></script>
+    <script src='leaflet-heat.js'></script>
+</body>
+
+</html>
