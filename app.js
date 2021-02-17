@@ -20,7 +20,7 @@ async function getLocations() {
     // store every latitude and longitude coordinates and intensity in new array
     const heatMapPoints = [];
     for (let i = 0; i < data.length; i++) {
-        heatMapPoints.push([data[i][0], data[i][1], 1])
+        heatMapPoints.push([data[i][0], data[i][1], 2])
     }
 
     L.heatLayer(heatMapPoints, { radius: 25 }).addTo(mymap);
