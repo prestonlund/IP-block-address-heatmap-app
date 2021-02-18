@@ -17,6 +17,12 @@ async function getLocations() {
     const response = await fetch(api_url);
     const data = await response.json();
 
+    function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    };
+
+    document.getElementById('amount').innerText = `Showing ${formatNumber(data.length)} locations worldwide`;
+
     // store every latitude and longitude coordinates and intensity in new array
     const heatMapPoints = [];
     for (let i = 0; i < data.length; i++) {
